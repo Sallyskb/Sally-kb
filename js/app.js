@@ -168,3 +168,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+let adminMode = false;
+
+function toggleAdmin() {
+  adminMode = !adminMode;
+
+  document.getElementById("admin-panel").classList.toggle("hidden");
+
+  alert(adminMode ? "Admin Mode ON 🔥" : "Admin Mode OFF ❌");
+}
+
+function createBook() {
+  let title = document.getElementById("bookTitle").value;
+
+  if (!title) return;
+
+  let container = document.getElementById("books-container");
+
+  let div = document.createElement("div");
+  div.classList.add("book");
+
+  div.innerHTML = `
+    <h3>${title}</h3>
+    ${adminMode ? '<button onclick="this.parentElement.remove()">حذف</button>' : ''}
+  `;
+
+  container.appendChild(div);
+
+  document.getElementById("bookTitle").value = "";
+}
