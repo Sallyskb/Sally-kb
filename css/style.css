@@ -628,7 +628,28 @@ body {
   color: rgba(255,255,255,0.7);
   margin-bottom: 20px;
 }
+.admin {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 220px;
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
+.hidden {
+  display: none;
+}
+
+.admin input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+}
 .subscribe-box input {
   width: 70%;
   padding: 12px;
@@ -1022,4 +1043,26 @@ input:focus, textarea:focus {
   gap: 12px;
   justify-content: center;
   margin-top: 20px;
+}
+.admin {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 220px;
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.admin input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
 }
