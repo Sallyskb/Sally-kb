@@ -1,70 +1,170 @@
-// ===============================
-// Sally KB - Space Background
-// ===============================
+/* =========================
+   APP INITIALIZATION
+========================= */
 
-const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
 
-// إنشاء النجوم
-for (let i = 0; i < 250; i++) {
+  /* =========================
+     MODALS (LOGIN / SIGNUP)
+  ========================= */
 
-    const star = document.createElement("div");
-    star.className = "star";
+  const loginBtn = document.querySelector(".login-btn");
+  const signupBtn = document.querySelector(".signup-btn");
 
-    star.style.left = Math.random() * 100 + "vw";
-    star.style.top = Math.random() * 100 + "vh";
+  const loginModal = document.getElementById("loginModal");
+  const signupModal = document.getElementById("signupModal");
 
-    const size = Math.random() * 3 + 1;
+  function openModal(modal) {
+    if (modal) modal.classList.add("active");
+  }
 
-    star.style.width = size + "px";
-    star.style.height = size + "px";
+  function closeModal(modal) {
+    if (modal) modal.classList.remove("active");
+  }
 
-    star.style.animationDelay = Math.random() * 5 + "s";
+  if (loginBtn && loginModal) {
+    loginBtn.addEventListener("click", () => openModal(loginModal));
+  }
 
-    body.appendChild(star);
-}
+  if (signupBtn && signupModal) {
+    signupBtn.addEventListener("click", () => openModal(signupModal));
+  }
 
-// إنشاء الشهب
-function createMeteor() {
+  window.addEventListener("click", (e) => {
+    if (e.target === loginModal) closeModal(loginModal);
+    if (e.target === signupModal) closeModal(signupModal);
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal(loginModal);
+      closeModal(signupModal);
+    }
+  });
+
+  /* =========================
+     BACK TO TOP BUTTON
+  ========================= */
+
+  const backToTop = document.getElementById("backToTop");
+
+  if (backToTop) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+
+  /* =========================
+     SPACE ENGINE (OPTIMIZED)
+  ========================= */
+
+  const meteorsContainer = document.getElementById("meteors");
+
+  let meteorCount = 0;
+  const MAX_METEORS = 15;
+
+  function createMeteor() {
+    if (!meteorsContainer) return;
+
+    if (meteorCount >= MAX_METEORS) {
+      meteorsContainer.removeChild(meteorsContainer.firstChild);
+      meteorCount--;
+    }
 
     const meteor = document.createElement("div");
 
-    meteor.className = "meteor";
+    meteor.style.position = "absolute";
+    meteor.style.width = "2px";
+    meteor.style.height = "70px";
+    meteor.style.background =
+      "linear-gradient(180deg, white, rgba(255,255,255,0))";
 
+    meteor.style.top = Math.random() * window.innerHeight + "px";
     meteor.style.left = Math.random() * window.innerWidth + "px";
+    meteor.style.opacity = Math.random();
 
-    meteor.style.top = "-100px";
+    meteor.style.transform = "rotate(45deg)";
+    meteor.style.pointerEvents = "none";
 
-    meteor.style.animationDuration =
-        (Math.random() * 2 + 2) + "s";
+    meteorsContainer.appendChild(meteor);
+    meteorCount++;
 
-    body.appendChild(meteor);
+    let x = parseFloat(meteor.style.left);
+    let y = parseFloat(meteor.style.top);
 
-    setTimeout(() => {
+    const speed = Math.random() * 3 + 2;
 
+    const interval = setInterval(() => {
+      x -= speed * 2;
+      y += speed * 2;
+
+      meteor.style.left = x + "px";
+      meteor.style.top = y + "px";
+
+      if (x < -100 || y > window.innerHeight + 100) {
         meteor.remove();
+        meteorCount--;
+        clearInterval(interval);
+      }
+    }, 30);
+  }
 
-    }, 5000);
-}
+  /* =========================
+     STARS GENERATION
+  ========================= */
 
-// كل عدة ثوان يظهر شهاب
-setInterval(() => {
+  function createStars(layerId, count, size) {
+    const layer = document.getElementById(layerId);
+    if (!layer) return;
 
-    createMeteor();
+    const fragment = document.createDocumentFragment();
 
-}, 3000);
+    for (let i = 0; i < count; i++) {
+      const star = document.createElement("div");
 
-// عند الضغط على زر استكشف الكتب
-const exploreBtn = document.querySelector(".hero button");
+      star.style.position = "absolute";
+      star.style.width = size + "px";
+      star.style.height = size + "px";
+      star.style.background = "white";
+      star.style.borderRadius = "50%";
 
-if (exploreBtn) {
+      star.style.top = Math.random() * window.innerHeight + "px";
+      star.style.left = Math.random() * window.innerWidth + "px";
+      star.style.opacity = Math.random();
 
-    exploreBtn.addEventListener("click", () => {
+      fragment.appendChild(star);
+    }
 
-        document.querySelector("#books")
-            .scrollIntoView({
-                behavior: "smooth"
-            });
+    layer.appendChild(fragment);
+  }
 
-    });
+  /* =========================
+     INIT SPACE
+  ========================= */
 
-}
+  window.addEventListener("load", () => {
+
+    createStars("stars-small", 60, 1);
+    createStars("stars-medium", 40, 2);
+    createStars("stars-large", 20, 3);
+
+    setInterval(() => {
+      if (!document.hidden) {
+        createMeteor();
+      }
+    }, 4000);
+
+  });
+
+});
