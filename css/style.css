@@ -934,3 +934,59 @@ html {
   background: #7f5af0;
   color: white;
 }
+/* =========================
+   FINAL POLISH (GLOBAL FIXES)
+========================= */
+
+/* تحسين المسافات بين الأقسام */
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* منع مشاكل overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* تحسين النصوص في الموبايل */
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .nav-menu {
+    display: none; /* لاحقًا نقدر نديرو mobile menu */
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .statistics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* تحسين خفيف للأنيميشن */
+button, a {
+  transition: all 0.3s ease;
+}
+
+/* تحسين الفوكس (accessibility) */
+input:focus, textarea:focus {
+  outline: 2px solid rgba(127, 90, 240, 0.6);
+}
