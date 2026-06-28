@@ -731,6 +731,22 @@ placeholder="كلمة المرور">
 <script src="js/space.js"></script>
 
 <script src="js/app.js"></script>
+  <header>
+  <h1>📚 مكتبتي الشخصية</h1>
+
+  <div>
+    <button onclick="toggleAdmin()">Admin</button>
+    <button onclick="addBook()">+ إضافة كتاب</button>
+  </div>
+</header>
+
+<!-- لوحة الأدمن -->
+<div id="admin-panel" class="admin hidden">
+  <h3>🛠 لوحة التحكم</h3>
+
+  <input type="text" id="bookTitle" placeholder="اسم الكتاب">
+  <button onclick="createBook()">إضافة</button>
+</div>
 
 </body>
 
