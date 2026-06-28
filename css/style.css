@@ -981,6 +981,7 @@ body {
   }
 }
 
+
 /* تحسين خفيف للأنيميشن */
 button, a {
   transition: all 0.3s ease;
@@ -989,4 +990,36 @@ button, a {
 /* تحسين الفوكس (accessibility) */
 input:focus, textarea:focus {
   outline: 2px solid rgba(127, 90, 240, 0.6);
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  line-height: 1.4;
+  background: linear-gradient(90deg, #8b5cf6, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.75);
+}
+
+/* أزرار متناسقة */
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
 }
