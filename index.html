@@ -7,65 +7,86 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sally KB Library</title>
+<title>Sally KB | حيث تبدأ المعرفة بالسؤال</title>
 
-<meta name="description" content="مكتبة Sally KB - اقرأ، حمل، واستكشف الكتب.">
+<meta name="description"
+content="مكتبة Sally KB الرقمية">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="theme-color"
+content="#050816">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="css/style.css">
 
 </head>
 
 <body>
 
-<!-- ============================= -->
+<!-- ===================== -->
 <!-- خلفية الفضاء -->
-<!-- ============================= -->
+<!-- ===================== -->
 
-<div class="space-background">
+<div id="space">
 
-<div class="stars"></div>
+<div id="nebula"></div>
 
-<div class="twinkling"></div>
+<div id="stars-small"></div>
 
-<div class="shooting-stars"></div>
+<div id="stars-medium"></div>
+
+<div id="stars-large"></div>
+
+<div id="meteors"></div>
 
 </div>
 
-<!-- ============================= -->
+<!-- ===================== -->
 <!-- شريط التنقل -->
-<!-- ============================= -->
+<!-- ===================== -->
 
 <header>
 
 <nav class="navbar">
 
-<div class="logo">
+<a class="logo" href="#">
 
-📚 Sally KB
+<span class="logo-icon">📚</span>
 
-</div>
+<span class="logo-text">
 
-<ul class="nav-links">
+Sally KB
+
+</span>
+
+</a>
+
+<ul class="nav-menu">
 
 <li><a href="#">الرئيسية</a></li>
 
-<li><a href="#">الكتب</a></li>
+<li><a href="#books">الكتب</a></li>
 
-<li><a href="#">التصنيفات</a></li>
+<li><a href="#categories">التصنيفات</a></li>
 
-<li><a href="#">من نحن</a></li>
+<li><a href="#quotes">الاقتباسات</a></li>
 
-<li><a href="#">تواصل معنا</a></li>
+<li><a href="#about">من نحن</a></li>
+
+<li><a href="#contact">تواصل</a></li>
 
 </ul>
 
-<div class="nav-buttons">
+<div class="nav-actions">
 
 <button class="login-btn">
 
@@ -85,13 +106,19 @@
 
 </header>
 
-<!-- ============================= -->
-<!-- الصفحة الرئيسية -->
-<!-- ============================= -->
+<!-- ===================== -->
+<!-- Hero -->
+<!-- ===================== -->
 
 <section class="hero">
 
 <div class="hero-content">
+
+<p class="hero-top">
+
+✦ مكتبة رقمية احترافية
+
+</p>
 
 <h1>
 
@@ -99,93 +126,612 @@
 
 </h1>
 
-<p>
+<p class="hero-description">
 
-اكتشف كتبًا تدعوك إلى التفكير، لا إلى التلقين.
+حيث تبدأ المعرفة بالسؤال...
 
-اقرأ الكتب مباشرة أو حمّلها مجانًا وشارك أفكارك مع مجتمع محب للمعرفة.
+استكشف الكتب، اقرأها مباشرة أو حمّلها،
+وشارك أفكارك مع مجتمع يؤمن بقيمة التفكير.
 
 </p>
 
 <div class="hero-buttons">
 
-<button class="primary-btn">
+<a href="#books"
+class="primary-button">
 
-📚 استكشف الكتب
+استكشف المكتبة
 
-</button>
+</a>
 
-<button class="secondary-btn">
+<a href="#latest"
+class="secondary-button">
 
-✨ أحدث الإصدارات
+أحدث الإصدارات
 
-</button>
+</a>
 
 </div>
 
 </div>
 
 </section>
-
-<!-- ============================= -->
+<!-- ===================== -->
 <!-- أحدث الكتب -->
-<!-- ============================= -->
+<!-- ===================== -->
 
-<section class="books-section">
+<section id="latest" class="latest-books">
 
-<h2>
+<div class="section-title">
 
-📖 أحدث الكتب
+<h2>📚 أحدث الكتب</h2>
 
-</h2>
-
-<div class="books-grid">
-
-<!-- بطاقة كتاب -->
-
-<div class="book-card">
-
-<div class="book-cover">
-
-غلاف الكتاب
+<p>
+أحدث الإصدارات المضافة إلى مكتبة Sally KB
+</p>
 
 </div>
 
-<h3>
+<div class="books-grid">
 
-كيف ولدت الآلهة؟
+<article class="book-card">
 
-</h3>
+<div class="book-cover">
+
+<span>غلاف الكتاب</span>
+
+</div>
+
+<div class="book-info">
+
+<h3>كيف وُلدت الآلهة؟</h3>
 
 <p>
 
-نبذة قصيرة عن الكتاب تظهر هنا.
+كتاب يناقش نشأة الأديان والأساطير
+من منظور تاريخي وفلسفي.
 
 </p>
 
 <div class="book-buttons">
 
-<button>
+<a href="#" class="read-btn">
 
-قراءة
+📖 قراءة
 
-</button>
+</a>
 
-<button>
+<a href="#" class="download-btn">
 
-تحميل PDF
+⬇ تحميل PDF
 
-</button>
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+<article class="book-card">
+
+<div class="book-cover">
+
+<span>غلاف الكتاب</span>
+
+</div>
+
+<div class="book-info">
+
+<h3>قريبًا...</h3>
+
+<p>
+
+سيظهر هنا الكتاب القادم
+بعد إضافته من لوحة الإدارة.
+
+</p>
+
+<div class="book-buttons">
+
+<a href="#" class="read-btn">
+
+📖 قراءة
+
+</a>
+
+<a href="#" class="download-btn">
+
+⬇ تحميل PDF
+
+</a>
 
 </div>
 
 </div>
 
-<!-- سنضيف بطاقات أخرى لاحقًا -->
+</article>
 
 </div>
 
 </section>
+
+<!-- ===================== -->
+<!-- اقتباس اليوم -->
+<!-- ===================== -->
+
+<section id="quotes" class="quote-section">
+
+<div class="quote-box">
+
+<h2>
+
+💡 اقتباس اليوم
+
+</h2>
+
+<blockquote>
+
+"المعرفة تبدأ عندما نتجرأ على السؤال."
+
+</blockquote>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- التصنيفات -->
+<!-- ===================== -->
+
+<section
+id="categories"
+class="categories">
+
+<h2>
+
+التصنيفات
+
+</h2>
+
+<div class="category-grid">
+
+<div class="category-card">
+
+فلسفة
+
+</div>
+
+<div class="category-card">
+
+نقد الأديان
+
+</div>
+
+<div class="category-card">
+
+تاريخ
+
+</div>
+
+<div class="category-card">
+
+علم النفس
+
+</div>
+
+<div class="category-card">
+
+علوم
+
+</div>
+
+<div class="category-card">
+
+روايات
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- الاشتراك -->
+<!-- ===================== -->
+
+<section class="subscribe">
+
+<div class="subscribe-box">
+
+<h2>
+
+اشترك ليصلك كل جديد
+
+</h2>
+
+<p>
+
+عند نشر كتاب جديد ستصلك
+إشعارات مباشرة.
+
+</p>
+
+<input
+type="email"
+placeholder="البريد الإلكتروني">
+
+<button>
+
+اشترك الآن
+
+</button>
+
+</div>
+
+  </section>
+  <!-- ===================== -->
+<!-- من نحن -->
+<!-- ===================== -->
+
+<section id="about" class="about">
+
+<div class="section-title">
+
+<h2>
+
+من نحن
+
+</h2>
+
+<p>
+
+Sally KB ليست مجرد مكتبة رقمية، بل مساحة لكل شخص يبحث عن المعرفة ويحب التفكير النقدي واستكشاف الأفكار.
+
+</p>
+
+</div>
+
+<div class="about-cards">
+
+<div class="about-card">
+
+<h3>
+
+📚 رسالتنا
+
+</h3>
+
+<p>
+
+توفير كتب عالية الجودة تساعد القارئ على التفكير والتحليل واكتشاف وجهات نظر مختلفة.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>
+
+🌍 رؤيتنا
+
+</h3>
+
+<p>
+
+أن تصبح Sally KB من أكبر المكتبات العربية المجانية المتخصصة في الكتب الفكرية والثقافية.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>
+
+🚀 هدفنا
+
+</h3>
+
+<p>
+
+بناء مجتمع من القراء والمفكرين يشارك المعرفة ويتبادل الآراء باحترام.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- إحصائيات -->
+<!-- ===================== -->
+
+<section class="statistics">
+
+<div class="stat-card">
+
+<h2>
+
++100
+
+</h2>
+
+<p>
+
+كتاب
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
++5000
+
+</h2>
+
+<p>
+
+قارئ
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+24/7
+
+</h2>
+
+<p>
+
+متاح دائمًا
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+مجاني
+
+</h2>
+
+<p>
+
+جميع الكتب
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+<!-- تواصل معنا -->
+<!-- ===================== -->
+
+<section id="contact" class="contact">
+
+<div class="section-title">
+
+<h2>
+
+تواصل معنا
+
+</h2>
+
+<p>
+
+إذا كان لديك اقتراح أو استفسار فلا تتردد في مراسلتنا.
+
+</p>
+
+</div>
+
+<form class="contact-form">
+
+<input
+type="text"
+placeholder="الاسم">
+
+<input
+type="email"
+placeholder="البريد الإلكتروني">
+
+<textarea
+placeholder="اكتب رسالتك هنا..."></textarea>
+
+<button type="submit">
+
+إرسال
+
+</button>
+
+</form>
+
+</section>
+<!-- ===================== -->
+<!-- Footer -->
+<!-- ===================== -->
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-about">
+
+<h2>
+
+📚 Sally KB
+
+</h2>
+
+<p>
+
+حيث تبدأ المعرفة بالسؤال.
+
+مكتبة رقمية مجانية تهدف إلى نشر المعرفة وإتاحة الكتب لجميع القراء.
+
+</p>
+
+</div>
+
+<div class="footer-links">
+
+<h3>
+
+روابط سريعة
+
+</h3>
+
+<ul>
+
+<li><a href="#">الرئيسية</a></li>
+
+<li><a href="#latest">أحدث الكتب</a></li>
+
+<li><a href="#categories">التصنيفات</a></li>
+
+<li><a href="#about">من نحن</a></li>
+
+<li><a href="#contact">تواصل معنا</a></li>
+
+</ul>
+
+</div>
+
+<div class="footer-social">
+
+<h3>
+
+تابعنا
+
+</h3>
+
+<a href="#">Facebook</a>
+
+<a href="#">Instagram</a>
+
+<a href="#">X (Twitter)</a>
+
+<a href="#">YouTube</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 Sally KB Library
+
+جميع الحقوق محفوظة.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ===================== -->
+<!-- زر العودة للأعلى -->
+<!-- ===================== -->
+
+<button id="backToTop">
+
+⬆
+
+</button>
+
+<!-- ===================== -->
+<!-- نافذة تسجيل الدخول -->
+<!-- ===================== -->
+
+<div id="loginModal" class="modal">
+
+<div class="modal-content">
+
+<h2>
+
+تسجيل الدخول
+
+</h2>
+
+<input
+type="email"
+placeholder="البريد الإلكتروني">
+
+<input
+type="password"
+placeholder="كلمة المرور">
+
+<button>
+
+دخول
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- نافذة إنشاء حساب -->
+<!-- ===================== -->
+
+<div id="signupModal" class="modal">
+
+<div class="modal-content">
+
+<h2>
+
+إنشاء حساب
+
+</h2>
+
+<input
+type="text"
+placeholder="الاسم الكامل">
+
+<input
+type="email"
+placeholder="البريد الإلكتروني">
+
+<input
+type="password"
+placeholder="كلمة المرور">
+
+<button>
+
+إنشاء الحساب
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- JavaScript -->
+<!-- ===================== -->
+
+<script src="js/space.js"></script>
+
 <script src="js/app.js"></script>
+
 </body>
-</html>
+
+  </html>
