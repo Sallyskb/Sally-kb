@@ -98,28 +98,181 @@ body {
   to {
     transform: translateY(-1000px);
      
-  }/* =========================
-   NAVBAR (GLASS SPACE STYLE)
-========================= */
+  }/*
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ==========================================
+   NAVBAR V2 - SALLY KB
+========================================== */
 
-  background: rgba(10, 14, 35, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background:rgba(5,8,22,.55);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
-  z-index: 1000;
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
+.navbar{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    height:80px;
+
+    padding:0 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+}
+
+.logo-icon{
+
+    display:none;
+
+}
+
+.logo-text{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    letter-spacing:.5px;
+
+    transition:.3s;
+
+}
+
+.logo:hover .logo-text{
+
+    color:#8b5cf6;
+
+}
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.login-btn,
+
+.signup-btn{
+
+    height:46px;
+
+    padding:0 24px;
+
+    border-radius:14px;
+
+    font-family:"Cairo",sans-serif;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.login-btn{
+
+    background:transparent;
+
+    color:#ffffff;
+
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+.login-btn:hover{
+
+    border-color:#8b5cf6;
+
+    color:#8b5cf6;
+
+}
+
+.signup-btn{
+
+    border:none;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#7c3aed,#3b82f6);
+
+    box-shadow:0 0 25px rgba(124,58,237,.35);
+
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 35px rgba(124,58,237,.55);
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:0 18px;
+
+height:72px;
+
+}
+
+.logo-text{
+
+font-size:26px;
+
+}
+
+.login-btn,
+
+.signup-btn{
+
+height:40px;
+
+padding:0 16px;
+
+font-size:13px;
+
+}
+
+}
 /* =========================
    LOGO
 ========================= */
