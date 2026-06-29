@@ -156,17 +156,36 @@ header{
 
 .logo-text{
 
-    font-size:32px;
+font-family:"Cairo",sans-serif;
 
-    font-weight:800;
+font-size:40px;
 
-    color:#ffffff;
+font-weight:900;
 
-    letter-spacing:.5px;
+letter-spacing:1.5px;
 
-    transition:.3s;
+color:#ffffff;
+
+text-decoration:none;
+
+text-shadow:
+0 0 10px rgba(255,255,255,.35),
+0 0 20px rgba(124,58,237,.45);
+
+transition:.35s ease;
 
 }
+
+.logo:hover .logo-text{
+
+color:#c4b5fd;
+
+text-shadow:
+0 0 15px rgba(196,181,253,.7),
+0 0 30px rgba(124,58,237,.6);
+
+}
+
 
 .logo:hover .logo-text{
 
